@@ -33,3 +33,6 @@ Icon?
 *.rar
 *.tar
 *.zip
+
+# Others
+node_modules/

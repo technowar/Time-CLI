@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const commander = require('commander');
+
+commander
+	.version('1.0.0')
+	.description('Time Tracker');
+
+commander
+	.command('time [UserId]')
+	.description('Time out nimo, UserId')
+	.action((userId) => {
+		require('../lib/timeout')(userId);
+	});
+
+commander
+	.command('find [Name]')
+	.description('Find specific user')
+	.action((text) => {
+		require('../lib/find')(text);
+	});
+
+commander
+	.command('list')
+	.description('Employee list')
+	.action(() => {
+		require('../lib/users')();
+	});
+
+commander.parse(process.argv);
+
+if (!commander.args.length) {
+	commander.help();
+}

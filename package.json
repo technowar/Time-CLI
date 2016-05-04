@@ -1,0 +1,18 @@
+{
+  "name": "time",
+  "version": "0.0.0",
+  "description": "Time Tracker",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Time"
+  ],
+  "author": "Johmel Rey Pintor",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "moment": "^2.11.2",
+    "request": "^2.69.0"
+  }
+}
